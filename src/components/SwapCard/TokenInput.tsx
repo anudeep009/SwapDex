@@ -17,7 +17,7 @@ const TokenInput: React.FC<TokenInputProps> = ({ label, defaultToken }) => {
         <input
           type="number"
           placeholder="0.0"
-          className="w-full bg-transparent text-2xl outline-none focus:ring-1 focus:ring-primary/20 rounded-lg"
+          className="w-full p-2 bg-transparent text-2xl outline-none focus:ring-1 focus:ring-primary/20 rounded-lg"
         />
         <button className="flex items-center space-x-2 bg-dark-hover rounded-xl px-3 py-2 hover:bg-dark-hover/80 transition-colors border border-dark-hover/20">
           <img

@@ -9,7 +9,7 @@ interface NavLinkProps {
 const NavLink = ({ href, children, active = false }: NavLinkProps) => (
   <a
     href={href}
-    className={`text-sm font-medium transition-colors ${
+    className={`block py-2 text-sm font-medium transition-colors ${
       active ? 'text-primary' : 'text-gray-300 hover:text-primary'
     }`}
   >
