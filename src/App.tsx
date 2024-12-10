@@ -1,16 +1,18 @@
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { WalletProvider, ConnectionProvider } from '@solana/wallet-adapter-react';
-import { clusterApiUrl } from '@solana/web3.js';
+import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
+import { clusterApiUrl } from '@solana/web3.js'
+import '@solana/wallet-adapter-react-ui/styles.css'
 
 import Header from './components/Header/Header';
 import SwapCard from './components/SwapCard/SwapCard';
 import Footer from './components/Footer/Footer';
 
 function App() {
-    const network = clusterApiUrl('devnet');
+    const network = 'devnet'
+    const endpoint = clusterApiUrl(network)
 
     return (
-        <ConnectionProvider endpoint={network}>
+        <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
                     <div className="min-h-screen bg-dark text-white flex flex-col">
